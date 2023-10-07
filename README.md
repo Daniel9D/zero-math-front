@@ -17,4 +17,6 @@ O Server ira inicar em > [http://localhost:3000](http://localhost:3000)
 
 > [!NOTE]
 > Pode iniciar projeto com Yarn run dev ou npm run dev
+
+> [!NOTE]
 > Projeto é um prototipo e provavelmente não ira compiliar
