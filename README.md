@@ -3,11 +3,9 @@
 Primeiro Rode o comando abaixo para instalar depedencias:
 
 ```bash
-npm run dev
+npm i
 # or
-yarn dev
-# or
-pnpm dev
+yarn install
 ```
 
 O Server ira inicar em > [http://localhost:3000](http://localhost:3000) 
