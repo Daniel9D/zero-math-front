@@ -1,0 +1,18 @@
+
+.Field{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+// .BoxItem{
+//     border: 3px solid;
+//     border-color: rgb(255, 0, 0);
+// }
+
+.inner-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+

@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
 
+import { Box, Container, Flex, Tabs, Text, Theme } from "@radix-ui/themes";
+import { useState } from "react";
+import GraphComponent from "../../components/graph";
+import ZeroFuncFieldsComponent from "../../components/zero-func-methods";
+// 
 export default function Home() {
+  const [x, setX] = useState([]);
+  const [y, sety] = useState([]);
+  const [roots, setroots] = useState([]);
+  const getResults = (res: any) => {
+    console.log(">>", res)
+    setX(res.x);
+    sety(res.y);
+    setroots(res.raizes);
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <div className="gradient"></div>
+      <Theme>
+        <Container className="conent" style={{ borderRadius: 10 }}>
+          <Box mb="4">
+            <Text align="center" weight="bold" as="div" size="6">Encontrar Raiz Aproximada De função 3000 Alpha</Text>
+          </Box>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <GraphComponent X={x} Y={y} root={roots} />
+          <Flex display="flex" direction="column">
+            <Tabs.Root defaultValue="bissection">
+              <Tabs.List>
+                <Tabs.Trigger value="bissection">Bissecção</Tabs.Trigger>
+                <Tabs.Trigger value="NewtonRaph">Newton Raph</Tabs.Trigger>
+                <Tabs.Trigger value="Secante">Secante</Tabs.Trigger>
+                <Tabs.Trigger value="FalsaPosicao">Falsa Posicao</Tabs.Trigger>
+                <Tabs.Trigger value="metPontoFixo">Metodo Ponto Fixo</Tabs.Trigger>
+              </Tabs.List>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+              <Box px="4" pt="3" pb="2">
+                <Tabs.Content value="bissection">
+                  <ZeroFuncFieldsComponent getResults={getResults} tipo={1}></ZeroFuncFieldsComponent>
+                </Tabs.Content>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+                <Tabs.Content value="NewtonRaph">
+                  <ZeroFuncFieldsComponent getResults={getResults} tipo={2}></ZeroFuncFieldsComponent>
+                </Tabs.Content>
+                <Tabs.Content value="Secante">
+                  <ZeroFuncFieldsComponent getResults={getResults} tipo={3}></ZeroFuncFieldsComponent>
+                </Tabs.Content>
+                <Tabs.Content value="FalsaPosicao">
+                  <ZeroFuncFieldsComponent getResults={getResults} tipo={4}></ZeroFuncFieldsComponent>
+                </Tabs.Content>
+                <Tabs.Content value="metPontoFixo">
+                  <ZeroFuncFieldsComponent getResults={getResults} tipo={5}></ZeroFuncFieldsComponent>
+                </Tabs.Content>
+              </Box>
+            </Tabs.Root>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          </Flex>
+        </Container>
+      </Theme>
+    </>
+  );
 }

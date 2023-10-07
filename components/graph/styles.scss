@@ -1,0 +1,27 @@
+$small-screen: 1024px;
+$medium-screen: 1500px;
+
+.conent{
+    margin-bottom:10px;
+    background-color:rgba(255,255,255,0.6);
+    width: 50vw;
+    transition: width 0.5s ease; // Adiciona uma transição suave à propriedade width
+
+    @media (max-width: $medium-screen) {
+        width: 70vw;
+    }
+  
+    @media (max-width: $small-screen) {
+        width: 90vw;
+    }
+
+    .text-container{
+        padding-top: 10px;
+    }
+}
+
+.graph{
+    height: 30vh;
+    margin-left: 5%;
+    margin-right: 5%;
+}
