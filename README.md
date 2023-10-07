@@ -13,4 +13,4 @@ pnpm dev
 O Server ira inicar em > [http://localhost:3000](http://localhost:3000) 
 
 > [!IMPORTANT]
-> Este projeto tem como depedencia [Backend](https://github.com/pedrozle/zero-math-back) 
+> Este projeto tem como depedencia [Backend](https://github.com/pedrozle/zero-math-back)  Para Calcular o resultado das funções
