@@ -25,8 +25,6 @@ export default function ZeroFuncFieldsComponent(props: any) {
         setData(Data);
     }
 
-
-
     async function sendData() {
         try {
             const roots = await axios.post('/api/calculate', data)
