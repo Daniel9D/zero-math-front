@@ -62,6 +62,7 @@ export default function GraphComponent(props: any) {
         min: Y.at(Y.length),
       },
     },
+    maintainAspectRatio: false
   };
 
   return (
