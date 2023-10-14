@@ -6,6 +6,16 @@ Primeiro Rode o comando abaixo para instalar depedencias:
 npm i
 # or
 yarn install
+
+```
+> [!IMPORTANT]
+> O projeto requer ".env.local"
+> caso não faça alterações na porta de execução , remova ".example" do arquivo mencionado acima
+
+
+Em seguida Rode
+```
+npm run dev
 ```
 
 O Server ira inicar em > [http://localhost:3000](http://localhost:3000) 
@@ -17,4 +27,4 @@ O Server ira inicar em > [http://localhost:3000](http://localhost:3000)
 > Pode iniciar projeto com Yarn run dev ou npm run dev
 
 > [!NOTE]
-> Projeto é um prototipo e provavelmente não ira compiliar
+> Projeto é um prototipo e provavelmente não ira compiliar , rode em modo dev
