@@ -22,7 +22,7 @@ export default function Home() {
       <Theme>
         <Container className="conent" style={{ borderRadius: 10 }}>
           <Box mb="4">
-            <Text align="center" weight="bold" as="div" size="6">Encontrar Raiz Aproximada De função 3000 Alpha</Text>
+            <Text align="center" weight="bold" as="div" size="6">Encontrar Raiz Aproximada De função </Text>
           </Box>
 
           <GraphComponent X={x} Y={y} root={roots} />
@@ -33,7 +33,7 @@ export default function Home() {
                 <Tabs.Trigger value="NewtonRaph">Newton Raph</Tabs.Trigger>
                 <Tabs.Trigger value="Secante">Secante</Tabs.Trigger>
                 <Tabs.Trigger value="FalsaPosicao">Falsa Posicao</Tabs.Trigger>
-                <Tabs.Trigger value="metPontoFixo">Metodo Ponto Fixo</Tabs.Trigger>
+                <Tabs.Trigger value="metPontoFixo">Ponto Fixo</Tabs.Trigger>
               </Tabs.List>
 
               <Box px="4" pt="3" pb="2">

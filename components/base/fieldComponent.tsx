@@ -64,7 +64,7 @@ export default function BaseComponent(props: any) {
                         <TextFieldInput
                             size="3"
                             onChange={(e) => props.dataFunc({ ...props.data, 'precisao': Number(e.target.value) })}
-                            placeholder="0.03 ou 3*10^2"
+                            placeholder="ex 0.03"
                         />
                     </Box>
                 </Box>

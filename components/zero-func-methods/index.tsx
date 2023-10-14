@@ -64,7 +64,7 @@ export default function ZeroFuncFieldsComponent(props: any) {
                                 Calcular
                             </Button>
 
-                            <ZeroFuncFieldsHelpComponent />
+                            <ZeroFuncFieldsHelpComponent method={props.tipo} />
 
                         </Box>
                     </Box>
