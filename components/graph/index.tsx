@@ -31,7 +31,7 @@ export default function GraphComponent(props: any) {
   const data = {
     datasets: [
       {
-        label: 'Linha',
+        label: 'Grafico',
         data: graph,
         fill: false,
         borderColor: "rgba(75,192,192,1)",
