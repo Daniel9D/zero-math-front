@@ -13,18 +13,12 @@ yarn install
 > caso não faça alterações na porta de execução , remova ".example" do arquivo mencionado acima
 
 
-Em seguida Rode
-```
-npm run dev
-```
-
-O Server ira inicar em > [http://localhost:3000](http://localhost:3000) 
-
 > [!IMPORTANT]
 > Este projeto tem como depedencia [Backend](https://github.com/pedrozle/zero-math-back)  Para Calcular o resultado das funções
 
 > [!NOTE]
 > Pode iniciar projeto com Yarn run dev ou npm run dev
+> O Server ira inicar em > [http://localhost:3000](http://localhost:3000) 
 
 > [!NOTE]
 > Projeto é um prototipo e provavelmente não ira compiliar , rode em modo dev
